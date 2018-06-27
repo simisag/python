@@ -1,0 +1,103 @@
+..Q.1- Create a circle class and initialize it with radius. Make two methods getArea and getCircumference inside this class.
+class Circle
+class Circle:
+    area=0
+    circum=0
+    def __init__(self,r):
+        self.radius=r
+    def getArea(self):
+        self.area=3.14*self.radius*self.radius
+        print(self.area)
+
+    def getCircum(self):
+        self.circum=2*3.14*self.radius
+        print(self.circum)
+c=Circle(4)
+c.getArea()
+c.getCircum()
+
+---------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Q.2- Create a Student class and initialize it with name and roll number. Make methods to :
+1. Display - It should display all informations of the student.
+class Info:
+    name="Simi"
+    roll=50
+    def display(self):
+        print("DETAILS")
+        print("NAME:",self.name,"ROLL NUMBER:",self.roll)
+a=Info()
+a.display()
+---------------------------------------------------------------------------------------------------------------------------------------
+Q.3- Create a Temprature class. Make two methods :
+1. convertFahrenheit - It will take celsius and will print it into Fahrenheit.
+2. convertCelsius - It will take Fahrenheit and will convert it into Celsius.       
+class Convert:
+    f=0
+    c=0
+    def convertToFahrenheit(self,c):
+        self.c=c
+        self.f= 1.8*self.c+32
+        print("Converted to fahrenheit",self.f)
+
+    def convertToCels(self,f):
+        self.f=f
+        self.c=(self.f-32)/1.8
+        print("Converted to celsius",self.c)
+
+
+
+temp=Convert()
+temp.convertToFahrenheit(40)
+temp.convertToCels(102.4)
+        
+--------------------------------------------------------------------------------------------------------------------------------------------
+**Q.4- Create a class MovieDetails and initialize it with Movie name, artistname,Year of release and ratings .
+Make methods to 
+1. Display-Display the details.
+2. Update- Update the movie details.
+class Movie:
+    
+    def __init__(self):
+        self.mname="Conjuiring2"
+        self.yor=2017
+        self.rat=4.8
+
+    def dis(self):
+        print("MOVIE NAME",self.mname,"  YEAR OF RELEASE:",self.yor," RATINGS:",self.rat)
+
+
+    def update(self,m,r=2018,t=5):
+        self.mname=m
+        self.yor=r
+        self.rat=t
+
+obj= Movie()
+obj.dis()
+obj.update("abc")
+obj.dis()
+obj.update("VEERE Di WEDDING",2018,3)
+obj.dis()
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+Q.5- Create a class Expenditure and initialize it with expenditure,savings.Make the following methods. 
+1. Display expenditure and savings 
+2. Calculate total salary
+3. Display salary 
+class Expend:
+    exp=0
+    sav=0
+    sal=0
+    def calcSal(self,e,s):
+        self.exp=e
+        self.sav=s
+        self.sal=self.exp+self.sav
+        return self.sal
+    def disSal(self):
+        print("SALARY:",self.sal)
+
+    def show(self):
+        print("TOTAL EXPENDITURE:",self.exp," ","SAVINGS:",self.sav)
+obj=Expend()
+obj.calcSal(40000,10000)
+obj.show()
+obj.disSal()
