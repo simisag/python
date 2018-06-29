@@ -1,0 +1,35 @@
+Q.1- Print anything you want on screen. 
+ print("What's up?")
+
+#######################################################################################
+Q.2- Join two strings using '+'.
+E.g.-"Acad"+"View” 
+p="Acad"
+q="view"
+print(p+q)
+Acadview
+######################################################################################
+Q.3- Take the input of 3 variables x, y and z . Print their values on screen. 
+x=int(input("Enter x"))
+y=int(input("Enter y"))
+z=int(input("Enter z"))
+print("value of x: %d"%(x))
+print("value of y: %d"%(y))
+print("value of z: %d"%(z))
+##############################################################################################
+Q.4- Print “Let’s get started” on screen. 
+ print('Let’s get started')
+
+#############################################################################################3
+Q.5- Print the following values using placeholders.
+s=”Acadview”
+course=”Python”
+fees=5000
+ans
+print('%s %s %d'%(s,course,fees))
+Q.6- Let’s do some interesting exercise:
+name=”Tony Stark”
+salary=1000000
+print(‘%s’’%d’)%(____ ,____) 
+Ans.
+print(‘%s’’%d’)%(name,salary) 

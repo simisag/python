@@ -1,0 +1,88 @@
+Q.1- Create a list with user defined inputs. 
+l=[]
+print("Enter your 5 favourite beverages")
+for a in range(0,5):
+    b=input("enter")
+    l.append(b)
+
+print("Your list")
+for a in range(0,5):
+    print(l[a])
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Add the following list to above created list:
+[‘google’,’apple’,’facebook’,’microsoft’,’tesla’] 
+
+co=['google','apple','facebook','microsoft','tesla']
+print("New list")
+l.extend(co)
+print(l)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.3- Count the number of time an object occurs in a list. 
+d=[1,2,34,1,2,1,1,2,11,2,2,2,2]
+print(d)
+print( "2 appears %d times"%(d.count(2)))
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.4- create a list with numbers and sort it in ascending order.
+d=[1,2,34,1,2,1,1,2,11,2,2,2,2]
+d.sort()
+print(d)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.5- Given are two one-dimensional arrays A and B which are sorted in ascending order. Write a program to merge them into a single sorted array C that contains every item from arrays A and B, in ascending order. [List]
+a=[1,2,3]
+b=[5,6,7]
+c=[]
+c.extend(a)
+c.extend(b)
+c.sort()
+print(a,b,c)
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.6-Implement a stack and queue using lists.
+l=[]
+print('''Stack
+Lets add elements''')
+l.append(1)
+print(l)
+l.append(2)
+print(l)
+l.append(3)
+print(l)
+print('lets delete')
+l.pop()
+print(l)
+
+
+l=[]
+print('lets implement queue')
+l.append(1)
+print(l)
+l.append(2)
+print(l)
+l.append(3)
+print(l)
+print('lets delete')
+l.pop(0)
+print(l)
+l.pop(0)
+print(l)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.1- Count even and odd numbers in that list.
+l=[1,2,3,4,5,6,7,8,9]
+eve=[]
+odd=[]
+for b in range(0,9):
+    if((l[b]%2)==0):
+        eve.append(l[b])
+    else:
+        odd.append(l[b])
+print("Odd list",odd)
+print("even list",eve)
+
+        
+
+
+        
+
