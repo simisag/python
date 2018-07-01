@@ -1,0 +1,108 @@
+Q.1- Create a class Animal as a base class and define method animal_attribute. Create another class Tiger which is inheriting Animal and access the base class method.
+class Animal:
+    def animal_attribute(self):
+        self.tig="roars"
+        self.cat="meow"
+        self.dog="bark"
+class Tiger(Animal):
+    def display(self):
+        self.animal_attribute()
+        print("Tigr can %s"%(self.tig))
+t=Tiger()
+t.display()
+    
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2- What will be the output of following code.
+
+class A:
+    def f(self):
+        return self.g()
+
+    def g(self):
+        return 'A'
+
+class B(A):
+    def g(self):
+        return 'B'
+
+a = A()
+b = B()
+print a.f(), b.f()
+
+output: invalid syntax
+print statement does not have parenthesis.
+print(a.f(),b.f()) gives correct output i.e. A B
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.3- Create a class Cop. Initialize its name, age , work experience and designation. Define methods to add, display and update the following details. Create another class Mission which extends the class Cop. Define method add_mission _details. Select an object of Cop and access methods of base class to get information for a particular cop and make it available for mission.
+
+class Cop:
+    def __init__(self):
+        self.name=""
+        self.age=0
+        self.work=0
+
+    def add_deets(self):
+        self.name= input("Enter your name:")
+        self.age= int(input("Enter your age:"))
+        self.work= int(input("Enter work experience:"))
+        
+    def update(self,n,a,w):
+        self.name=n
+        self.age=a
+        self.work=w
+        
+    def display(self):
+        print("Your details")
+        print("NAME:",self.name,"  AGE:",self.age,"  WORK EXPERIENCE:",self.work)
+
+class Mission(Cop):
+    def add_mission_details(self,m):
+        self.misn=m
+    def show(self):
+        self.display()
+        print("MISSION:",self.misn)
+        
+b=Mission()
+b.add_deets()
+b.add_mission_details("Solve Murder case")
+b.show()
+print("Update details")
+b.update("Riya",30,5)
+b.add_mission_details("Solve cyber crime case")
+b.show()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.4- Create a class Shape.Initialize it with length and breadth Create the method Area. Create class rectangle and square which inherits shape and access the method Area.
+class Shape:
+    def __init__(self):
+        self.leng=0
+        self.br=0
+    def area(self,l,b):
+        self.leng=l
+        self.br=b
+        print(self.leng*self.br)
+class Rect(Shape):
+    def show(self,l,b):
+        print("oh we have a RECTANGLE")
+        self.area(l,b)
+class Square(Shape):
+    def dis(self,l,b):
+        print("oh we have a SQUARE")
+        self.area(l,b)
+        
+r=Rect()
+r.show(3,6)
+s=Square()
+s.dis(2,2)
+
+
+
+
+
+
+
+
+
+
+
+
+
