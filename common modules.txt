@@ -1,0 +1,46 @@
+Q.1- What is Time Tuple?
+It is a tuple that has 9 numbers:day,hour,minutes,seconds,day of week,day of year,4 digit year,month and daylight savings.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Write a program to get formatted time.
+import time
+print("Today's date:")
+i=time.gmtime()
+print(time.asctime(i))
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. Extract month from time.
+import datetime
+x=datetime.dateime.now()
+print(x.strftime(%B))
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.4- Extract day from the time.
+import datetime
+x=datetime.dateime.now()
+print(x.strftime(%A))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.5- Extract date (ex : 11 in 11/01/2021) from the time.
+import datetime
+x=datetime.dateime.now()
+print(x.strftime(%d))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q.6- Write a program to print time using localtime method.
+import time
+print(" Local time:",time.localtime(time.time()))
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.7- Find the factorial of a number input by user using math package functions.
+import math
+n=int(input("enter"))
+print(" factorial of 5: %d"%(math.factorial(n)))
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.8- Find the GCD of a number input by user using math package functions.
+import math
+a=int(input("enter"))
+b=int(input("enter"))
+print(math.gcd(a,b))
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.9- Use OS package and do the following tasks: 
+1. Get current working directory.
+2. Get the user environment.
+import os
+print(os.name)
+print(os.getcwd())
