@@ -1,0 +1,94 @@
+Q.1- Name and handle the exception occured in the following program: 
+a=3
+ if a<4:
+    a=a/(a-3)
+     print(a)
+output:ZeroDivisionError occurs
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Name and handle the exception occurred in the following program: 
+l=[1,2,3]
+print(l[3])
+output: IndexError will occur as list index  is out of range
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.3- What will be the output of the following code:
+# Program to depict Raising Exception
+ 
+try:
+    raise NameError("Hi there")  # Raise Error
+except NameError:
+    print "An exception"
+    raise  # To determine whether the exception was raised or not
+output: An exception
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.4- What will be the output of the following code:
+ # Function which returns a/b
+def AbyB(a , b):
+	try:
+		c = ((a+b) / (a-b))
+	except ZeroDivisionError:
+		print "a/b result in 0"
+	else:
+		print c
+
+# Driver program to test above function
+AbyB(2.0, 3.0)
+AbyB(3.0, 3.0)
+output: -5.0
+a/b result in 0
+  
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.5- Write a program to show and handle following exceptions: 
+1. Import Error
+l=[1,3,6,9]
+
+try:
+    for i in range(4):
+       
+        print("factorial of %d"%(l[i]))
+        print(math.factorial(l[i]))
+        
+except ImportError as imp:
+    print("Import error")
+except :
+    print("error")
+finally:
+    print("program executed")
+
+2. Value Error
+try:
+    n=int(input("enter value"))
+
+except ValueError as ve:
+    print(ve)
+except Exception as e:
+    print(e)
+
+
+3. Index Error
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.6- Create a user-defined exception AgeTooSmallError() that warns the user when they have entered age less than 18. The code must keep taking input till the user enters the appropriate age number(less than 18).
+class AgeTooSmallError(Exception):
+    def __init__(self,n,m):
+        self.num=n
+        self.m=m
+        
+    def show(self,n):
+        print(self.m)
+while True:
+    try:
+        n=int(input("enter your age"))
+        if(n<18):
+            raise AgeTooSmallError(n,"age is less than 18")
+        break
+    except AgeTooSmallError as aee:
+        aee.show(n)
+   
+    
+
+
+    
+
+
+    
+
+ 
