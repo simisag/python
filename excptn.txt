@@ -67,8 +67,12 @@ except Exception as e:
 3. Index Error
 
 l=[2,3,4]
-for i in range(0,5):
-    print(l[i])
+try:
+    for i in range(0,5):
+        print(l[i])
+except IndexError as ie:
+    print(ie)
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
 Q.6- Create a user-defined exception AgeTooSmallError() that warns the user when they have entered age less than 18. The code must keep taking input till the user enters the appropriate age number(less than 18).
