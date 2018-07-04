@@ -1,0 +1,55 @@
+Q.1- Extract the user id, domain name and suffix from the following email addresses. 
+emails = "zuck26@facebook.com" "page33@google.com"
+"jeff42@amazon.com"
+desired_output = [('zuck26', 'facebook', 'com'), ('page33', 'google', 'com'), ('jeff42', 'amazon', 'com')]
+import re
+emails = ["zuck26@facebook.com"," page33@google.com"," jeff42@amazon.com"]
+l2=[]
+for i in emails:
+    l=re.split('[@./s]',i)
+    l2.append(tuple(l))
+
+print(l2)
+----------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Retrieve all the words starting with ‘b’ or ‘B’ from the following text.
+text = "Betty bought a bit of butter, But the butter was so bitter, So she bought some better butter, To make the bitter butter better."
+import re
+text = "Betty bought a bit of butter, But the butter was so bitter, So she bought some better butter, To make the bitter butter better."
+obj=re.findall('[bB]\w*',text)
+print(obj)
+-----------------------------------------------------------------------------------------------------------------------------------------
+Q.3- Split the following irregular sentence into words 
+sentence = "A, very very; irregular_sentence"
+desired_output = "A very very irregular sentence"
+import re
+sentence = "A, very very; irregular_sentence"
+j=re.sub('[\W_]',' ',sentence)
+for i in j:
+    print(i,end="")
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+Q4Wap to iterate over a list and store the cube list into another list using lambda.
+l=[2,4,5,6]
+cu=lambda x:x**3
+l2=[]
+for i in l:
+    l2.append(cu(i))
+print(l2)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q5.Wap to iterate over a list and store the cube list into another list using map
+l=[12,34,56,78]
+def cubes(a):
+    return a**3
+
+print(list(map(cubes,l)))
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q6.wap to iterate over a list,and add its element using reduce
+from functools import reduce
+l=[34,8,3,2]
+b=reduce(lambda x,y:x+y,l)
+print(b)
+
+
+
+
+
