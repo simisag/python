@@ -1,0 +1,62 @@
+ASSIGNMENT-17(GUI)
+Q1. Write a python program using tkinter interface to write Hello World and a exit button that closes the interface. 
+from tkinter import *
+root=Tk()
+root.title("myApp")
+hL=Label(root,text="Hello World",font="Arial 25 bold")
+hL.pack();
+ex=Button(root,text="exit" ,width='20',command=root.destroy)
+ex.pack()
+root.mainloop()
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q2. Write a python program to in the same interface as above and create a action when the button is click it will display some text. 
+from tkinter import *
+def display():
+    gL=Label(root,text="Hey beautiful! keep smiling.", font="20")
+    gL.pack(side=LEFT)
+root=Tk()
+root.title("myApp")
+root.configure(background="red")
+hL=Label(root,text="Hello World",font="Arial 25 bold")
+hL.pack()
+ex=Button(root,text="exit" ,width='20',command=root.destroy)
+dis=Button(root,text='click here', width='20' ,command=display)
+ex.pack()
+dis.pack()
+root.mainloop()
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3. Create a frame using tkinter with any label text and two buttons.One to exit and other to change the label to some other text.
+from tkinter import *
+def display():
+    hL.configure(text="stay classy",font="Arial 25 bold")
+    hL.pack()
+root=Tk()
+root.title("NEW_APP")
+root.configure(background="Blue")
+f1=Frame(root,bg="yellow")
+f1.pack(fill=X)
+hL=Label(f1,text="Girls......",font="Arial 25 bold")
+hL.pack()
+ex=Button(f1,text="exit" ,width='20',command=root.destroy)
+dis=Button(f1,text='ok', width='40',command=display)
+ex.pack()
+dis.pack()
+root.mainloop()
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Q4. Write a python program using tkinter interface to take an input in the GUI program and print it.
+from tkinter import *
+def openit():
+    r=Tk()
+    a=c.get()
+    kL=Label(r,text=a)
+    kL.pack()
+root=Tk()
+root.configure(background='pink')
+root.title('New Application')
+c=Entry(root)
+c.pack()
+but=Button(root,text="submit",command=openit)
+but.pack()
+root.mainloop()
