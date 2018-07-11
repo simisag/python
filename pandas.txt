@@ -1,0 +1,28 @@
+ASSIGNMENT - PANDAS
+Q.1 - Create a dataframe with your name , age , mail id and phone number and add your friends’s information to the same.
+import pandas as pd
+d={'name':pd.Series(["simar saggu","Prabhnoor saini","Divya choudhary"]),
+   'age':pd.Series([21,21,20]),
+   'id':pd.Series(['25simar.sag@gmail.com','noorsaini@gmail.com','divya12@gmail.com']),
+   'num':pd.Series([9876543210,12345678,978695082])}
+frame=pd.DataFrame(d)
+print(frame)
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2 - Import the data and print the following :
+a.) First 5 rows of Dataframe 
+b.) First 10 rows of the Dataframe 
+c.) find basic statistics on the particular dataset. 
+d.) Find the last 5 rows of the dataframe 
+e.) Extract the 2nd column and find basic statistics on it.
+import pandas as pd
+d=pd.read_csv("weather.csv")
+df=pd.DataFrame(d)
+print("Five elements",df.head(5))
+print("ten elemts",df.head(10))
+print("Descrption",df.describe(include="all"))
+print("descrption of location column",df.describe(include="all").Location)
+print("last 5",df.tail())
+
+
+
+
