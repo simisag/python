@@ -1,0 +1,83 @@
+Q.1- Create a database. Create the following tables:
+1. Book
+2. Titles
+3. Publishers
+4. Zipcodes
+5. AuthorsTitles
+6. Authors
+import pymysql as pm
+try:
+    con=pm.connect(host='localhost',database='mydbs',user='root',password='simu1234')
+    c=con.cursor()
+    cre_qu='create table Book4(Bid int(5) primary key,TitlID int(5),loc varchar(30),gen varchar(20))'
+    c_title='create table Title1(Tid int(5) primary key,Titl varchar(30),isbn varchar(20),Publicid int(5),Pub_yr int(4))'
+    c_pub='create table Publisher1(Pubid int(5) primary key,Add varchar(30) suite int(10),ZipCodeid int(10))'
+    c_zip='create table Zip1(Zipid int(5) primary key,city varchar(30),state varchar(30),code int(10))'
+    c_auth='create table Author_Tit1( ATid int(5) primary key,Authid int(5),TitleId int(5))'
+    c_au='create table Author1(Authid int(5) primary key,f_name varchar(40),m_name varchar(30),l_name(30))'
+    c.execute(cre_qu)
+    c.execute(c_title)
+    c.execute(c_pub)
+    c.execute(c_zip)
+    c.execute(c_auth)
+    c.execute(c_au)
+   
+except pm.DatabaseError as e:
+    print(e)
+finally:
+    c.close()
+    con.close()
+    
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q.2- Insert values in the tables.
+import pymysql as pm
+try:
+    con=pm.connect(host='localhost', database='mydbs', user='root', password='simu@1234')
+    c = con.cursor()
+    query1= "insert into Book4 values(%s,%s,%s,%s)"
+    data = [(1,34,'New Delhi','fiction'),
+            (2,21, 'Bang', 'Romance'),
+            (3,72, 'Mumbai', 'Action')]
+    c.executemany(query1,data)
+
+    con.commit()
+   
+except pm.DatabaseError as e:
+    if con:
+        con.rollback()
+    print(e)
+
+finally:
+    c.close()
+    con.close()
+---------------------------------------------------------------------------------------------------------------------------
+Q.3- Update any values in any of the tables. Print the original and updated values.
+import pymysql as pm
+
+try:
+    con=pm.connect(host='localhost',database='mydbs',user='root',password='simu1234')
+    c=con.cursor()
+    query1 = 'select * from Book4'
+    c.execute(query1)
+    data = c.fetchall()
+    for i in data:
+        print("Book_ID: {}, Title_ID: {}, Location: {}, Genre: {} ".format(i[0] ,i[1] ,i[2] ,i[3]))
+    query= "update Book4 set Location='Venzuala' where Bid= 34"
+    c.execute(query)
+    query2 = "update Book set Tid=Tid+3 where Bid= 72 "
+    c.execute(query2)
+    query1 = 'select * from Book4'
+    c.execute(query1)
+    data = c.fetchall()
+    for i in data:
+       print("Book_ID: {}, Title_ID: {}, Location: {}, Genre: {} ".format(i[0], i[1], i[2], i[3]))
+
+except pm.DatabaseError as e:
+    if con:
+        con.rollback()
+        print(e)
+
+finally:
+    con.close()    
+
